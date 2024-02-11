@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px; /* Add padding to create space around text */
+            border-radius: 10px; /* Add border-radius for rounded corners */
+            background: url('https://i.pinimg.com/originals/df/a9/f6/dfa9f69d89d9a6abb0ec0cc6dca254ac.gif') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden; /* Hide overflowing flower petals */
+            text-align: center; /* Center-align text */
+            color: white; /* Text color */
+        }
+        h1 {
+            color: white;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            animation: credits 20s linear infinite; /* Apply credits animation to paragraphs */
+            text-align: center; /* Center-align text */
+            color: white; /* Text color */
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e60000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Adjust the transparency */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            color: black; /* Text color */
+        }
+        .popup-content {
+            font-size: 18px;
+        }
+        .popup-btns {
+            margin-top: 20px;
+        }
+        .popup-btns button {
+            margin: 0 10px;
+        }
+        .gif {
+            display: none;
+        }
+        .credits-animation {
+            animation: credits 20s linear infinite;
+        }
+        @keyframes credits {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100%); }
+        }
+        /* Flower petal animation */
+        .flower-petals {
+            pointer-events: none; /* Flower petals should not interfere with button clicks */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.pinimg.com/originals/16/76/46/16764680c75a60cd5dcb2c31321a7503.gif') repeat-y;
+            animation: fall 15s linear infinite; /* Customize animation duration as needed */
+            z-index: 1; /* Ensure flower petals are behind content */
+        }
+        @keyframes fall {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="flower-petals"></div> <!-- Flower petal animation -->
+
+<h1 class="credits-animation">Will You Be My Valentine?</h1>
+<p class="credits-animation">Dear Adhiss baby,</p>
+<p class="credits-animation">As Valentine's Day approaches, I wanted to take a moment to express how much you mean to me.</p>
+<p class="credits-animation">You bring so much joy, love, and happiness into my life, and I can't imagine spending this special day without you by my side.</p>
+<p class="credits-animation">So, Adhiss baby, will you be my Valentine?</p>
+<div class="btn-container">
+    <button onclick="yes()">Yes, duuh I'll be your Valentine!</button>
+    <button onclick="no()">Naurr</button>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        Are you sure?
+    </div>
+    <div class="popup-btns">
+        <button onclick="no()">Nuh uhh!</button>
+        <button onclick="yes()">Okay, yes!</button>
+    </div>
+</div>
+
+<script>
+    function yes() {
+        window.location.href = 'big_boobies.html'; // Redirect to big boobies page
+    }
+
+    function no() {
+        document.querySelector('.popup').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
